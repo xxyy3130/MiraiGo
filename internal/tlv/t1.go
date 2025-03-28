@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/Sclock/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/binary"
 )
 
 func T1(uin uint32, ip []byte) []byte {

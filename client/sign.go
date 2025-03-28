@@ -3,8 +3,8 @@ package client
 import (
 	"strconv"
 
-	"github.com/Sclock/MiraiGo/client/pb/oidb"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/client/pb/oidb"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 // SendGroupSign 发送群聊打卡消息

@@ -10,9 +10,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/client/pb"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/client/pb"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 // see com/tencent/mobileqq/highway/utils/BaseConstants.java#L120-L121

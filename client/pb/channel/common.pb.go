@@ -4,7 +4,7 @@
 package channel
 
 import (
-	msg "github.com/Sclock/MiraiGo/client/pb/msg"
+	msg "github.com/xxyy3130/MiraiGo/client/pb/msg"
 	proto "github.com/RomiChan/protobuf/proto"
 )
 

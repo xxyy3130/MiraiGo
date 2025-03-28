@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-option go_package = "github.com/Sclock/MiraiGo/client/pb/channel";
+option go_package = "github.com/xxyy3130/MiraiGo/client/pb/channel";
 
 message BatchGetMsgRspCountReq {
   repeated GuildMsg guildMsgList = 1;

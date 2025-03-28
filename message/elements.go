@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Sclock/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
 )
 
 //go:generate go run generate.go

@@ -8,10 +8,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/pb/channel"
-	"github.com/Sclock/MiraiGo/client/pb/msg"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/pb/channel"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 func init() {

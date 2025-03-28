@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/client/pb"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/client/pb"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 type Transaction struct {

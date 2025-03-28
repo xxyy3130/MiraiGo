@@ -15,15 +15,15 @@ import (
 
 	"github.com/RomiChan/syncx"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/client/internal/auth"
-	"github.com/Sclock/MiraiGo/client/internal/highway"
-	"github.com/Sclock/MiraiGo/client/internal/intern"
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/internal/oicq"
-	"github.com/Sclock/MiraiGo/client/pb/msg"
-	"github.com/Sclock/MiraiGo/message"
-	"github.com/Sclock/MiraiGo/utils"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/client/internal/auth"
+	"github.com/xxyy3130/MiraiGo/client/internal/highway"
+	"github.com/xxyy3130/MiraiGo/client/internal/intern"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/internal/oicq"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/message"
+	"github.com/xxyy3130/MiraiGo/utils"
 )
 
 type QQClient struct {

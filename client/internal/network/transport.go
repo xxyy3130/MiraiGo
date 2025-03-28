@@ -4,11 +4,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/client/internal/auth"
-	"github.com/Sclock/MiraiGo/client/pb"
-	"github.com/Sclock/MiraiGo/internal/proto"
-	"github.com/Sclock/MiraiGo/wrapper"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/client/internal/auth"
+	"github.com/xxyy3130/MiraiGo/client/pb"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/wrapper"
 	"github.com/pkg/errors"
 )
 

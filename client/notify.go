@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Sclock/MiraiGo/utils"
+	"github.com/xxyy3130/MiraiGo/utils"
 
-	"github.com/Sclock/MiraiGo/client/pb/notify"
+	"github.com/xxyy3130/MiraiGo/client/pb/notify"
 )
 
 type (

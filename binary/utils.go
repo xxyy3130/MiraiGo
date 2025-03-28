@@ -8,7 +8,7 @@ import (
 	"encoding/hex"
 	"net"
 
-	"github.com/Sclock/MiraiGo/utils"
+	"github.com/xxyy3130/MiraiGo/utils"
 )
 
 type GzipWriter struct {

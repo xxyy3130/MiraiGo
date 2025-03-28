@@ -1,4 +1,4 @@
-module github.com/Sclock/MiraiGo
+module github.com/xxyy3130/MiraiGo
 
 go 1.20
 

@@ -1,6 +1,6 @@
 package tlv
 
-import "github.com/Sclock/MiraiGo/binary"
+import "github.com/xxyy3130/MiraiGo/binary"
 
 func T401(d []byte) []byte {
 	return binary.NewWriterF(func(w *binary.Writer) {

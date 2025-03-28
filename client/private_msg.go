@@ -6,9 +6,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/client/pb/msg"
-	"github.com/Sclock/MiraiGo/internal/proto"
-	"github.com/Sclock/MiraiGo/message"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/message"
 )
 
 func (c *QQClient) SendPrivateMessage(target int64, m *message.SendingMessage) *message.PrivateMessage {

@@ -1,8 +1,8 @@
 package client
 
 import (
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
 )
 
 var privateMsgDecoders = map[int32]func(*QQClient, *msg.Message, *network.Packet){

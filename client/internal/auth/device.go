@@ -8,8 +8,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/client/pb"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/client/pb"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 type OSVersion struct {

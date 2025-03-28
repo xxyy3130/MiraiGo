@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-option go_package = "github.com/Sclock/MiraiGo/client/pb/msf";
+option go_package = "github.com/xxyy3130/MiraiGo/client/pb/msf";
 
 message DiscussList {
   optional uint64 discussCode = 1;

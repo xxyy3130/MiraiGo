@@ -1,5 +1,5 @@
 syntax = "proto2";
-option go_package = "github.com/Sclock/MiraiGo/client/pb/oidb";
+option go_package = "github.com/xxyy3130/MiraiGo/client/pb/oidb";
 
 message Comment {
   optional string id = 1;

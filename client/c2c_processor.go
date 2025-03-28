@@ -1,6 +1,6 @@
 package client
 
-//go:generate go run github.com/Sclock/MiraiGo/internal/generator/c2c_switcher
+//go:generate go run github.com/xxyy3130/MiraiGo/internal/generator/c2c_switcher
 
 import (
 	"fmt"
@@ -8,11 +8,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/pb"
-	"github.com/Sclock/MiraiGo/client/pb/msg"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/pb"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 type (

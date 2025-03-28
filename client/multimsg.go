@@ -12,15 +12,15 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/client/internal/highway"
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/pb/longmsg"
-	"github.com/Sclock/MiraiGo/client/pb/msg"
-	"github.com/Sclock/MiraiGo/client/pb/multimsg"
-	"github.com/Sclock/MiraiGo/internal/proto"
-	"github.com/Sclock/MiraiGo/message"
-	"github.com/Sclock/MiraiGo/utils"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/client/internal/highway"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/pb/longmsg"
+	"github.com/xxyy3130/MiraiGo/client/pb/msg"
+	"github.com/xxyy3130/MiraiGo/client/pb/multimsg"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/message"
+	"github.com/xxyy3130/MiraiGo/utils"
 )
 
 func init() {

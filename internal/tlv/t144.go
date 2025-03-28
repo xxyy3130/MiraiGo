@@ -1,7 +1,7 @@
 package tlv
 
 import (
-	"github.com/Sclock/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/binary"
 )
 
 func T144(

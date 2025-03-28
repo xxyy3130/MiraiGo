@@ -1,8 +1,8 @@
 package client
 
 import (
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/internal/oicq"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/internal/oicq"
 )
 
 //go:noinline

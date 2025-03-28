@@ -7,13 +7,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Sclock/MiraiGo/binary"
-	"github.com/Sclock/MiraiGo/binary/jce"
-	"github.com/Sclock/MiraiGo/client/internal/network"
-	"github.com/Sclock/MiraiGo/client/pb"
-	"github.com/Sclock/MiraiGo/client/pb/msgtype0x210"
-	"github.com/Sclock/MiraiGo/client/pb/notify"
-	"github.com/Sclock/MiraiGo/internal/proto"
+	"github.com/xxyy3130/MiraiGo/binary"
+	"github.com/xxyy3130/MiraiGo/binary/jce"
+	"github.com/xxyy3130/MiraiGo/client/internal/network"
+	"github.com/xxyy3130/MiraiGo/client/pb"
+	"github.com/xxyy3130/MiraiGo/client/pb/msgtype0x210"
+	"github.com/xxyy3130/MiraiGo/client/pb/notify"
+	"github.com/xxyy3130/MiraiGo/internal/proto"
 )
 
 var msg0x210Decoders = map[int64]func(*QQClient, []byte) error{

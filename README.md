@@ -13,7 +13,7 @@ CQHTTP 用户建议使用基于 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 
 ## 使用方法
 
 ```bash
-go get -u github.com/Sclock/MiraiGo
+go get -u github.com/xxyy3130/MiraiGo
 ```
 
 ## 支持的功能
