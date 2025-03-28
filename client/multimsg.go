@@ -313,6 +313,12 @@ func (builder *ForwardMessageBuilder) Main(m *message.ForwardMessage) *message.F
 		Sum:       bodyHash[:],
 		Size:      int64(len(body)),
 	}
+	if c.highwaySession.AddrLength() == 0 {
+ 		c.uploadGroupOrGuildImage(message.Source{
+ 			SourceType: message.SourceGroup,
+ 			PrimaryID:  builder.groupCode,
+ 		}, bytes.NewReader(make([]byte, 8)))
+ 	}
 	_, err = c.highwaySession.Upload(input)
 	if err != nil {
 		return nil
