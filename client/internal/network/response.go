@@ -67,8 +67,15 @@ func (t *Transport) readSSOFrame(resp *Response, payload []byte) error {
 		// ok
 	case -10008:
 		return errors.WithStack(ErrSessionExpired)
+	case -10201:
+ 		// 账号被禁言, 需要手机解禁
+ 		resp.Message = head.ReadString()
+ 		resp.CommandName = head.ReadString()
+ 		return errors.Errorf("当前账号被暂时封禁, 请登录手机 QQ, 前往安全中心解禁 <%s>(%d)", resp.Message, retCode)
 	default:
-		return errors.Errorf("return code unsuccessful: %d", retCode)
+		resp.Message = head.ReadString()
+ 		resp.CommandName = head.ReadString()
+ 		return errors.Errorf("return code unsuccessful: %d, message: %s, command: %s", retCode, resp.Message, resp.CommandName)
 	}
 	resp.Message = head.ReadString()
 	resp.CommandName = head.ReadString()
