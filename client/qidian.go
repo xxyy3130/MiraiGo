@@ -9,7 +9,6 @@ import (
 	"net/http"
 
 	"github.com/pkg/errors"
-
 	"github.com/xxyy3130/MiraiGo/binary"
 	"github.com/xxyy3130/MiraiGo/client/internal/network"
 	"github.com/xxyy3130/MiraiGo/client/pb/cmd0x3f6"
@@ -38,6 +37,7 @@ func (c *QQClient) getQiDianAddressDetailList() ([]*FriendInfo, error) {
 				Sig:  c.QiDian.bigDataReqSession.SessionKey,
 				Type: proto.Uint32(27),
 			},
+		},
 		GetAddressDetailListReqBody: &cmd0x6ff.GetAddressDetailListReqBody{
 			Timestamp: proto.Uint32(0),
 			Timestamp2: proto.Uint64(0),
