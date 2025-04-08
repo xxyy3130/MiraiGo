@@ -81,3 +81,21 @@ type C3F6CRMMsgHead struct {
 	AppId      proto.Option[uint32] `protobuf:"varint,14,opt"`
 	_          [0]func()
 }
+
+type GetQQFriendGroupListReqBody struct {
+}
+
+type QQFriendGroupInfo struct {
+	GroupId    proto.Option[uint32] `protobuf:"varint,1,opt"`
+	GroupName  proto.Option[string] `protobuf:"bytes,2,opt"`
+	CreateTime proto.Option[uint32] `protobuf:"fixed32,3,opt"`
+}
+
+type QQFriendGroupInfoListBody struct {
+	QQFriendGroupInfo []*QQFriendGroupInfo `protobuf:"bytes,1,rep"`
+}
+
+type GetQQFriendGroupListRspBody struct {
+	Ret                   *RetInfo                   `protobuf:"bytes,1,opt"`
+	QQFriendGroupInfoList *QQFriendGroupInfoListBody `protobuf:"bytes,2,opt"`
+}
