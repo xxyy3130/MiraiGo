@@ -30,11 +30,14 @@ func (c *QQClient) getQiDianAddressDetailList() ([]*FriendInfo, error) {
 	req := &cmd0x6ff.C519ReqBody{
 		SubCmd: proto.Uint32(33),
 		CrmCommonHead: &cmd0x6ff.C519CRMMsgHead{
-			KfUin:     proto.Uint64(uint64(c.QiDian.MasterUin)),
-			VerNo:     proto.Uint32(uint32(utils.ConvertSubVersionToInt(c.version().SortVersionName))),
 			CrmSubCmd: proto.Uint32(33),
+			VerNo:     proto.Uint32(uint32(utils.ConvertSubVersionToInt(c.version().SortVersionName))),
+			KfUin:     proto.Uint64(uint64(c.QiDian.MasterUin)),
 			LaborUin:  proto.Uint64(uint64(c.Uin)),
-		},
+			LoginSig: &cmd0x6ff.LoginSig{
+				Sig:  c.QiDian.bigDataReqSession.SessionKey,
+				Type: proto.Uint32(27),
+			},
 		GetAddressDetailListReqBody: &cmd0x6ff.GetAddressDetailListReqBody{
 			Timestamp: proto.Uint32(0),
 			Timestamp2: proto.Uint64(0),
@@ -126,6 +129,8 @@ func (c *QQClient) bigDataRequest(subCmd uint32, req proto.Message) ([]byte, err
 	if c.QiDian.bigDataReqSession == nil {
 		return nil, errors.New("please call conn key request method before")
 	}
+	version := strings.Join(strings.Split(c.version().SortVersionName, "."), "")
+	versionNum, _ := strconv.Atoi(version)
 	data, _ := proto.Marshal(req)
 	head, _ := proto.Marshal(&msg.IMHead{
 		HeadType: proto.Uint32(4),
@@ -134,7 +139,7 @@ func (c *QQClient) bigDataRequest(subCmd uint32, req proto.Message) ([]byte, err
 			Command:      proto.Uint32(1791),
 			SubCommand:   proto.Some(subCmd),
 			Seq:          proto.Uint32(uint32(c.nextHighwayApplySeq())),
-			Version:      proto.Uint32(500), // todo: short version convert
+			Version:      proto.Uint32(uint32(versionNum)), // todo: short version convert
 			Flag:         proto.Uint32(1),
 			CompressType: proto.Uint32(0),
 			ErrorCode:    proto.Uint32(0),
