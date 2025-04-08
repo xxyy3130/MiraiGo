@@ -106,7 +106,7 @@ var (
 		QiDian: {
 			ApkId:           "com.tencent.qidian",
 			AppId:           537141100,
-			SubAppId:        537141100,
+			SubAppId:        537036590,
 			SortVersionName: "6.2.3",
 			BuildTime:       1642426115,
 			ApkSign:         []byte{0xA0, 0x1E, 0xEC, 0xAB, 0x85, 0xE9, 0xE3, 0xBA, 0x2B, 0x0F, 0x6A, 0x15, 0x8C, 0x85, 0x5C, 0x29},
