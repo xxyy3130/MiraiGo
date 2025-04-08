@@ -20,6 +20,7 @@ import (
 )
 
 func init() {
+	decoders["qidianservice.254"] = decodeGetQQFriendGroupListResponse
 	decoders["qidianservice.69"] = decodeLoginExtraResponse
 	decoders["HttpConn.0x6ff_501"] = decodeConnKeyResponse
 }
@@ -35,6 +36,7 @@ func (c *QQClient) getQiDianAddressDetailList() ([]*FriendInfo, error) {
 			LaborUin:  proto.Uint64(uint64(c.Uin)),
 		},
 		GetAddressDetailListReqBody: &cmd0x6ff.GetAddressDetailListReqBody{
+			Timestamp: proto.Uint32(0),
 			Timestamp2: proto.Uint64(0),
 		},
 	}
@@ -62,6 +64,22 @@ func (c *QQClient) getQiDianAddressDetailList() ([]*FriendInfo, error) {
 	}
 	return ret, nil
 }
+
+func (c *QQClient) getQQFriendGroupList() (uint16, []byte) {
+ 	req := &cmd0x3f6.C3F6ReqBody{
+ 		SubCmd: proto.Uint32(254),
+ 		CrmCommonHead: &cmd0x3f6.C3F6CRMMsgHead{
+ 			CrmSubCmd:  proto.Uint32(254),
+ 			KfUin:      proto.Uint64(uint64(c.QiDian.MasterUin)),
+ 			VerNo:      proto.Uint32(uint32(utils.ConvertSubVersionToInt(c.version().SortVersionName))),
+ 			Clienttype: proto.Uint32(2),
+ 			LaborUin:   proto.Uint64(uint64(c.Uin)),
+ 		},
+ 		GetQQFriendGroupListReqBody: &cmd0x3f6.GetQQFriendGroupListReqBody{},
+ 	}
+ 	payload, _ := proto.Marshal(req)
+ 	return c.uniPacket("qidianservice.254", payload)
+ }
 
 func (c *QQClient) buildLoginExtraPacket() (uint16, []byte) {
 	req := &cmd0x3f6.C3F6ReqBody{
@@ -192,3 +210,19 @@ func decodeConnKeyResponse(c *QQClient, pkt *network.Packet) (any, error) {
 	}
 	return nil, nil
 }
+
+func decodeGetQQFriendGroupListResponse(c *QQClient, pkt *network.Packet) (any, error) {
+ 	rsp := cmd0x3f6.C3F6RspBody{}
+ 	if err := proto.Unmarshal(pkt.Payload, &rsp); err != nil {
+ 		return nil, errors.Wrap(err, "failed to unmarshal protobuf message")
+ 	}
+ 	if rsp.GetQQFriendGroupListRspBody == nil {
+ 		return nil, errors.New("get friend group list resp is nil")
+ 	}
+ 
+ 	for _, srv := range rsp.GetQQFriendGroupListRspBody.QQFriendGroupInfoList.QQFriendGroupInfo {
+ 		c.logger.Error(srv.GroupName.Unwrap())
+ 	}
+ 
+ 	return nil, nil
+ }
