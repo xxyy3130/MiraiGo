@@ -11,6 +11,7 @@ type C3F6ReqBody struct {
 	SubCmd                            proto.Option[uint32]               `protobuf:"varint,1,opt"`
 	CrmCommonHead                     *C3F6CRMMsgHead                    `protobuf:"bytes,2,opt"`
 	SubcmdLoginProcessCompleteReqBody *QDUserLoginProcessCompleteReqBody `protobuf:"bytes,42,opt"`
+	GetQQFriendGroupListReqBody       *GetQQFriendGroupListReqBody       `protobuf:"bytes,254,opt"`
 	_                                 [0]func()
 }
 
@@ -18,6 +19,7 @@ type C3F6RspBody struct {
 	SubCmd                            proto.Option[uint32]               `protobuf:"varint,1,opt"`
 	CrmCommonHead                     *C3F6CRMMsgHead                    `protobuf:"bytes,2,opt"`
 	SubcmdLoginProcessCompleteRspBody *QDUserLoginProcessCompleteRspBody `protobuf:"bytes,42,opt"`
+	GetQQFriendGroupListRspBody       *GetQQFriendGroupListRspBody       `protobuf:"bytes,254,opt"`
 	_                                 [0]func()
 }
 
